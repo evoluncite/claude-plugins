@@ -10,7 +10,15 @@ Claude las hace directamente, sin que tengas que abrir la app en el navegador.
 
 ## Instalar
 
-**Claude Cowork o claude.ai** (cada persona): Configuración › Conectores › Agregar conector
+**Claude Team o Enterprise** (quien administra Claude): descarga
+[evoluncite-plugin.zip](https://github.com/evoluncite/claude-plugins/releases/latest/download/evoluncite-plugin.zip)
+y súbelo en **Organization settings › Plugins & skills › Add › Upload a plugin**. Después, cada
+persona abre el plugin en Cowork, pestaña **Connectors**, y conecta Evoluncite.
+
+**Claude Pro o Max en Cowork**: **Customize › Plugins › Add › Add marketplace** con
+`evoluncite/claude-plugins`, e instala `evoluncite` desde **Discover**.
+
+**Solo el conector** (cualquier plan): Configuración › Conectores › Agregar conector
 personalizado, con el nombre `Evoluncite` y la URL:
 
 ```

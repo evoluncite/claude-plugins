@@ -40,31 +40,51 @@ mientras la uses. Si pasan 30 días sin usarla, tienes que volver a aprobar.
 
 ## Instalación en Claude Cowork
 
-Hay dos caminos. Si tu empresa usa Claude Team o Enterprise, pregúntale primero a quien
-administra Claude en tu organización: puede que ya lo haya dejado listo.
+El plugin trae el conector y además le enseña a Claude cómo trabajar con Evoluncite (skills) y
+agrega los comandos `/evo-conectar`, `/evo-oficina` y `/evo-bandeja` (en Cowork se escriben
+`/evoluncite:evo-conectar`, `/evoluncite:evo-oficina` y `/evoluncite:evo-bandeja`). El camino
+depende del plan de Claude de tu empresa. Los nombres de los menús son los de Claude en inglés.
 
-### Opción A: conector personalizado (cada persona)
+### Claude Team o Enterprise (quien administra Claude)
 
-1. En Claude, abre **Configuración › Conectores**.
-2. Elige **Agregar conector personalizado**.
-3. Nombre: `Evoluncite`. URL: `https://romulo.evo-app.cloud/api/v1/mcp`. Guarda.
-4. Pulsa **Conectar** junto a Evoluncite y aprueba en Evoluncite como se explica arriba.
-5. En una conversación de Cowork, revisa que el conector Evoluncite esté activo y pide algo
-   sencillo, por ejemplo: «¿qué puedo hacer en Evoluncite desde aquí?».
+Requisito: Cowork y Skills activos en la organización (sin Skills, los plugins no cargan).
+
+1. Descarga el plugin:
+   `https://github.com/evoluncite/claude-plugins/releases/latest/download/evoluncite-plugin.zip`.
+2. En Claude, abre **Organization settings › Plugins & skills › Add › Upload a plugin** y sube el
+   archivo.
+3. En **Inventory**, en el menú de la fila de `evoluncite`, elige en **Default access** la opción
+   **Installed by default** (o **Available to install** si prefieres que cada persona lo instale).
+4. Si en el plugin el conector Evoluncite aparece como **Not added**, agrégalo una vez en
+   **Organization settings › Connectors** como conector personalizado: nombre `Evoluncite`, URL
+   `https://romulo.evo-app.cloud/api/v1/mcp`.
+5. Cada persona abre el plugin en Cowork, pestaña **Connectors**, pulsa **Connect** junto a
+   Evoluncite y aprueba en Evoluncite como se explica arriba.
+
+Para actualizar el plugin, descarga de nuevo el archivo del paso 1 y súbelo otra vez.
+
+El repositorio público no se puede sincronizar desde la organización: Claude solo sincroniza
+repositorios privados. Por eso se sube el archivo.
+
+### Claude Pro o Max (cada persona)
+
+1. En Cowork, abre **Customize › Plugins › Add › Add marketplace** y escribe
+   `evoluncite/claude-plugins`.
+2. En **Discover**, elige `evoluncite` e instálalo.
+3. En el plugin, pestaña **Connectors**, pulsa **Connect** junto a Evoluncite y aprueba en
+   Evoluncite.
+
+### Solo el conector (sin skills ni comandos)
+
+1. En Claude, abre **Configuración › Conectores › Agregar conector personalizado**.
+2. Nombre: `Evoluncite`. URL: `https://romulo.evo-app.cloud/api/v1/mcp`. Guarda.
+3. Pulsa **Conectar** junto a Evoluncite y aprueba en Evoluncite.
 
 En Team y Enterprise, puede que solo quien administra la organización pueda agregar conectores
-personalizados. En ese caso lo agrega una vez para todos y cada persona solo hace el paso 4.
+personalizados. En ese caso lo agrega una vez para todos y cada persona solo hace el paso 3.
 
-### Opción B: plugin de la organización (quien administra Claude)
-
-El plugin trae el conector y además le enseña a Claude cómo trabajar con Evoluncite (skills) y
-agrega los comandos `/evo-conectar`, `/evo-oficina` y `/evo-bandeja`.
-
-1. En la administración de plugins de tu organización en Claude, agrega el marketplace
-   `evoluncite/claude-plugins`.
-2. Habilita el plugin `evoluncite` para las personas que lo van a usar.
-3. Cada persona conecta su cuenta la primera vez que Claude use Evoluncite, o con
-   `/evo-conectar`.
+En cualquier camino, prueba con algo sencillo en una conversación de Cowork, por ejemplo: «¿qué
+puedo hacer en Evoluncite desde aquí?».
 
 ## Instalación en Claude Code
 
