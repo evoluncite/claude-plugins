@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "evoluncite",
+  "owner": {
+    "name": "Evoluncite",
+    "url": "https://evoluncite.com"
+  },
+  "metadata": {
+    "description": "Plugins oficiales de Evoluncite para Claude Code y Claude Cowork."
+  },
+  "plugins": [
+    {
+      "name": "evoluncite",
+      "source": "./plugins/evoluncite",
+      "description": "Conecta Claude con tu cuenta de Evoluncite: CRM, cartera, proyectos, las acciones de la app y la Oficina de agentes, con tus mismos permisos.",
+      "category": "productivity",
+      "homepage": "https://evoluncite.com"
+    }
+  ]
+}

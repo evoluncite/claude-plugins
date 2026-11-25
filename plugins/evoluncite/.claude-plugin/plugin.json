@@ -1,0 +1,11 @@
+{
+  "name": "evoluncite",
+  "version": "0.2.0",
+  "description": "Conecta Claude con tu cuenta de Evoluncite: CRM, cartera, proyectos, las acciones de la app y la Oficina de agentes, con tus mismos permisos.",
+  "author": {
+    "name": "Evoluncite",
+    "url": "https://evoluncite.com"
+  },
+  "homepage": "https://evoluncite.com",
+  "keywords": ["evoluncite", "crm", "cartera", "agentes", "mcp"]
+}

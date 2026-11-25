@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "evoluncite": {
+      "type": "http",
+      "url": "${EVOLUNCITE_MCP_URL:-https://romulo.evo-app.cloud/api/v1/mcp}"
+    }
+  }
+}
